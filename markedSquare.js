@@ -1,6 +1,6 @@
 var random01 = function() {
     /*
-    返回 0 或 1
+    Return 0 o 1
     */
     var a = Math.random()
     if(a > 0.85) {
@@ -13,8 +13,8 @@ var random01 = function() {
 
 var randomLine09 = function(n) {
     /*
-    返回一个只包含了 0 9 的随机 array, 长度为 n
-    假设 n 为 5, 返回的数据格式如下(这是格式范例, 真实数据是随机的)
+    Returns a random array containing only 0 9 with a length of n
+     Assuming n is 5, the returned data format is as follows (this is a sample format, real data is random)
     [0, 0, 9, 0, 9]
     */
     var l = []
@@ -70,11 +70,11 @@ var clonedSquare = function(array) {
 }
 
 /*
-    array 是一个「包含了『只包含了 0 9 的 array』的 array」
-    返回一个标记过的 array
-    ** 注意, 使用一个新数组来存储结果, 不要直接修改老数组
+    Array is an "array containing "arrays containing only 0 9""
+     Return a tagged array
+    ** Note that using a new array to store the results, do not modify the old array directly
 
-    范例如下, 这是 array
+    Here's an example. This is array
     [
         [0, 9, 0, 0],
         [0, 0, 9, 0],
@@ -82,7 +82,7 @@ var clonedSquare = function(array) {
         [0, 9, 0, 0],
     ]
 
-    这是标记后的结果
+    This is the result after marking
     [
         [1, 9, 2, 1],
         [2, 4, 9, 2],
@@ -90,7 +90,7 @@ var clonedSquare = function(array) {
         [2, 9, 2, 1],
     ]
 
-    规则是, 0 会被设置为四周 8 个元素中 9 的数量
+    The rule is that 0 will be set to 9 out of 8 elements
 */
 var markedSquare = function(array) {
     var result = clonedSquare(array)
