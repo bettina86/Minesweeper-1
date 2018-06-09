@@ -33,7 +33,7 @@ var testWin = function() {
 	var squareMine = es('.mine').length
 	var minesNums = Number(mines.innerHTML)
 	if(minesNums + squareMine == squareLeft) {
-		alert('恭喜你获得胜利！')
+		alert('Congratulations！')
 		clickedAll()
 		stopTimer()
 	}
@@ -45,7 +45,7 @@ var testLose = function() {
 		clicked(event)
 	} else {
 		clickedAll()
-		alert('你输了！')
+		alert('You lose！')
 		stopTimer()	
 	}
 }
@@ -70,7 +70,7 @@ var clickedShow = function(target) {
 	}
 	removeMine(target)
 
-	if (value.innerHTML == '雷') {
+	if (value.innerHTML == 'Mine') {
 		testLose()
 	} else {
 		testWin()
@@ -212,7 +212,7 @@ var modifyLine = function(line, nums) {
 		if(nums[i] != 9) {
 			span.innerHTML = nums[i]	
 		} else {
-			span.innerHTML = '雷'
+			span.innerHTML = 'Mine'
 		}	
 	}
 }
